@@ -8,7 +8,7 @@ nova:settings
 nova:users
 nova:posts
 nova:comments
-nova:newsletter
+#nova:newsletter
 nova:search
 nova:notifications
 nova:getting-started
@@ -16,7 +16,7 @@ nova:categories
 nova:share
 nova:voting
 nova:forms
-nova:embedly
+#nova:embedly
 nova:api
 nova:rss
 nova:kadira
