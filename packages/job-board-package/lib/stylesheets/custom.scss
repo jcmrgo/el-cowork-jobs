@@ -10,6 +10,11 @@ $gray: #95989A;
   border-bottom: 1.5px solid $light-gray;
 }
 
+.header{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .btn-primary {
   color: #fff;
   background-color: $red;
@@ -66,4 +71,48 @@ $gray: #95989A;
 .users-name:hover {
   color: $gray;
   text-decoration: none;
+}
+
+.post-page {
+  border: 1.5px solid $light-gray;
+  padding: 20px;
+}
+
+.post-page-header {
+  display: flex;
+  padding-bottom: 18px; 
+  border-bottom: 1.5px solid $light-gray;
+}
+
+.post-page-title {
+  flex-grow: 1;
+  color: $red;
+}
+
+.post-page-body {
+  display: flex;
+  padding-top: 18px;
+}
+
+.post-page-info {
+  flex-grow: 1;
+}
+
+.post-body {
+  flex-grow: 8;
+  padding-left: 20px;
+}
+
+.post-page-info-item {
+  border-bottom: 1.5px solid $light-gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.post-page-info-item:last-child {
+  border-bottom: none;
+}
+
+.post-page-info-item:first-child {
+  padding-top: 0;
 }

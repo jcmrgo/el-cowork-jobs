@@ -13,7 +13,7 @@ const CustomPostsListHeader = () => {
         <div className="posts-list-categories">
           <ListContainer collection={Categories} limit={0} resultsPropName="categories" component={CategoriesList}/>
         </div>
-        <PostsViews />
+        
         <SearchForm/>
       </div>
     </div>
