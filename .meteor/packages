@@ -11,10 +11,10 @@ nova:comments
 #nova:newsletter
 nova:search
 nova:notifications
-nova:getting-started
+#nova:getting-started
 nova:categories
 nova:share
-nova:voting
+#nova:voting
 nova:forms
 #nova:embedly
 nova:api
@@ -41,3 +41,4 @@ nova:debug
 
 # uncomment to activate example custom package
 # my-custom-package
+job-board-package

@@ -1,0 +1,69 @@
+$red: #F81234;
+$red-dark: #E31234;
+$light-gray: #E5E5E5;
+$medium-gray: #95989A;
+$gray: #95989A;
+
+
+.header-wrapper{
+  background: #fff;
+  border-bottom: 1.5px solid $light-gray;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: $red-dark;
+  border-color: $red-dark;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: $red-dark;
+  border-color: $red-dark;
+}
+
+.posts-list-content{
+  border-top: none;
+}
+.posts-item {
+  border-bottom: none;
+  border: 1.5px solid $light-gray;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.posts-item-title .posts-item-title-link {
+  color: $red;
+}
+
+.posts-categories a {
+	border-color: $gray;
+	background-color: $gray;
+	color: #fff;
+	border-radius: 0 0 0 0;
+	font-size: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.posts-categories a:hover {
+	border-color: $gray;
+	background-color: $gray;
+	color: #fff;
+}
+
+.users-name {
+  color: $gray;
+}
+
+.users-name:hover {
+  color: $gray;
+  text-decoration: none;
+}
