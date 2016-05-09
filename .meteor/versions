@@ -94,6 +94,7 @@ nova:email@0.26.1-nova
 nova:email-templates@0.26.1-nova
 nova:events@0.26.1-nova
 nova:forms@0.26.1-nova
+nova:getting-started@0.26.1-nova
 nova:i18n@0.26.1-nova
 nova:kadira@0.26.1-nova
 nova:lib@0.26.1-nova
