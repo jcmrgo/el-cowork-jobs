@@ -90,6 +90,7 @@ p, li, ul {
   border-bottom: 1.5px solid $light-gray;
 }
 
+
 .post-page-title {
   flex-grow: 1;
   color: $red;
@@ -142,4 +143,9 @@ p, li, ul {
 
 .post-page-info-contact a:hover {
   text-decoration: none;
+}
+@media (max-width: 480px) {
+.post-page-header, .post-page-body {
+    display: inline-block;
+}
 }
