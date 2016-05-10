@@ -30,7 +30,7 @@ nova:base-routes
 nova:email-templates
 
 accounts-password
-accounts-twitter
+# accounts-twitter
 # accounts-facebook
 
 ############ Debug Packages ############
@@ -42,3 +42,4 @@ nova:debug
 # uncomment to activate example custom package
 # my-custom-package
 job-board-package
+fortawesome:fontawesome

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import SmartContainers from "meteor/utilities:react-list-container";
 const ListContainer = SmartContainers.ListContainer;
@@ -13,7 +13,7 @@ const CustomPostsListHeader = () => {
         <div className="posts-list-categories">
           <ListContainer collection={Categories} limit={0} resultsPropName="categories" component={CategoriesList}/>
         </div>
-        
+        <PostsViews />
         <SearchForm/>
       </div>
     </div>

@@ -1,6 +1,25 @@
 import React, { PropTypes, Component } from 'react';
 
+import Core from "meteor/nova:core";
+const ModalTrigger = Core.ModalTrigger;
+
 class CustomPostsItem extends Telescope.components.PostsItem {
+  renderActions() {
+
+    ({PostsEditForm} = Telescope.components);
+
+    const component = (
+      <ModalTrigger title="Edit Post" component={<a className="edit-link">Edit</a>}>
+        <PostsEditForm post={this.props.post}/>
+      </ModalTrigger>
+    );
+
+    return (
+      <div className="post-actions">
+        {Users.can.edit(this.props.currentUser, this.props.post) ? component : ""}
+      </div>
+    )
+  }
 
   render() {
 
@@ -19,20 +38,20 @@ class CustomPostsItem extends Telescope.components.PostsItem {
         <div className="posts-item-content">
           
           <h3 className="posts-item-title">
-            <a className="posts-item-title-link" href={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>{post.title}</a>
+            <a className="posts-item-title-link" href={Posts.getPageUrl(post, false)}>{post.title}</a>
             {this.renderCategories()}
           </h3>
           
           <div className="posts-item-meta">
-            {post.user? <div className="posts-item-user"><UsersAvatar user={post.user} size="small"/><UsersName user={post.user}/></div> : null}
+            {post.user? <div className="posts-item-user"><i className="fa fa-building"></i>&nbsp;<UsersName user={post.user}/></div> : null}
+            {(post.jobLocation) ? <div className="posts-item-location">- <i className="fa fa-map-marker"></i>&nbsp;{post.jobLocation}&nbsp; </div> : null}
             {(this.context.currentUser && this.context.currentUser.isAdmin) ?<PostsStats post={post} />:null}
+            {this.renderActions()}
           </div>
 
         </div>
 
-        <div className="posts-item-date">{moment(post.postedAt).fromNow()}</div>
-
-        {this.renderCommenters()}
+        <div className="posts-item-date"><i className="fa fa-clock-o"></i> {moment(post.postedAt).fromNow()}</div>
       
       </div>
     )

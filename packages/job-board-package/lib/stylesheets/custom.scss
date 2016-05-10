@@ -1,9 +1,15 @@
 $red: #F81234;
 $red-dark: #E31234;
 $light-gray: #E5E5E5;
-$medium-gray: #95989A;
 $gray: #95989A;
+$dark-gray: #646464;
 
+body {
+  color: $dark-gray;
+}
+p, li, ul {
+  color: $gray;
+}
 
 .header-wrapper{
   background: #fff;
@@ -64,7 +70,7 @@ $gray: #95989A;
 	color: #fff;
 }
 
-.users-name {
+.users-name, .posts-item-user, .posts-item-location {
   color: $gray;
 }
 
@@ -95,11 +101,11 @@ $gray: #95989A;
 }
 
 .post-page-info {
-  flex-grow: 1;
+  flex: 0 0 200px;
 }
 
 .post-body {
-  flex-grow: 8;
+  flex: 1 1 600px;
   padding-left: 20px;
 }
 
@@ -115,4 +121,21 @@ $gray: #95989A;
 
 .post-page-info-item:first-child {
   padding-top: 0;
+}
+
+.post-page-info-item .company-name {
+  color: $dark-gray;
+  font-weight: bold;
+}
+
+.post-page-info-item .company-name:hover {
+  text-decoration: none;
+}
+
+.post-page-info-contact a {
+  color: $dark-gray;
+}
+
+.post-page-info-contact a:hover {
+  text-decoration: none;
 }

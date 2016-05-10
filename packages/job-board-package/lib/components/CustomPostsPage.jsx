@@ -1,9 +1,12 @@
 import React from 'react';
 import { Accounts } from 'meteor/std:accounts-ui';
 
-const PostsPage = ({document, currentUser}) => {
+import Core from "meteor/nova:core";
+const ModalTrigger = Core.ModalTrigger;
+
+const CustomPostsPage = ({document, currentUser}) => {
   
-  ({PostsItem, PostsCategories, UserName, SocialShare, Vote, PostsStats, HeadTags, AccountsForm} = Telescope.components);
+  ({PostsCategories, UserName, SocialShare, PostsStats, HeadTags, AccountsForm} = Telescope.components);
 
   const post = document;
   const htmlBody = {__html: post.htmlBody};
@@ -16,19 +19,24 @@ const PostsPage = ({document, currentUser}) => {
       {/* <PostsItem post={post}/> */}
       <div className="post-page-header">
         <div className="post-page-title"><h2>{post.title}</h2></div>
-        <div className="post-page-date-posted">{moment(post.postedAt).fromNow()}</div>
+        <div className="post-page-date-posted"><i className="fa fa-clock-o"></i> {moment(post.postedAt).fromNow()}</div>
       </div>
       <div className="post-page-body">
         <div className="post-page-info">
           <div className="post-page-info-item">
-            <a className="user-name" href={Users.getProfileUrl(post.user)}>{Users.getDisplayName(post.user)}</a>
+            <a className="company-name" href={Users.getProfileUrl(post.user)}><i className="fa fa-building"></i> {Users.getDisplayName(post.user)}</a>
             {post.user.telescope.bio?<p>{post.user.telescope.bio}</p> : null}
           </div>
+          {(post.jobLocation) ?
           <div className="post-page-info-item">
-            <b>Monterrey, MX</b>
-          </div>
+            <b><i className="fa fa-map-marker"></i> {post.jobLocation}</b>
+          </div> : null}
+          {(post.url) ?
+          <div className="post-page-info-item post-page-info-contact">
+            <i className="fa fa-envelope-o"></i> <a href={'mailto:'+post.url} target="_blank">{post.url}</a>
+          </div> : null}
           <div className="post-page-info-item">
-            hola@nimbo-x.com
+          <PostsCategories post={post}/>
           </div>
         </div>
         <div className="post-body" dangerouslySetInnerHTML={htmlBody}></div>
@@ -40,4 +48,4 @@ const PostsPage = ({document, currentUser}) => {
   )
 };
 
-module.exports = PostsPage;
+module.exports = CustomPostsPage;
