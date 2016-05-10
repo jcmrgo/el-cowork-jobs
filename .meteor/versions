@@ -74,6 +74,7 @@ meteorhacks:unblock@1.1.0
 minifier-css@1.1.11
 minifier-js@1.1.11
 minimongo@1.0.16
+miro:mailchimp@1.1.0
 modules@0.6.1
 modules-runtime@0.6.3
 momentjs:moment@2.12.0
@@ -96,6 +97,7 @@ nova:getting-started@0.26.1-nova
 nova:i18n@0.26.1-nova
 nova:kadira@0.26.1-nova
 nova:lib@0.26.1-nova
+nova:newsletter@0.26.1-nova
 nova:notifications@0.26.1-nova
 nova:posts@0.26.1-nova
 nova:rss@0.26.1-nova
