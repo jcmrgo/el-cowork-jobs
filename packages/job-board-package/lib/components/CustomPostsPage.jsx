@@ -33,7 +33,9 @@ const CustomPostsPage = ({document, currentUser}) => {
           </div> : null}
           {(post.url) ?
           <div className="post-page-info-item post-page-info-contact">
-            <i className="fa fa-envelope-o"></i>&nbsp;{(post.url.indexOf('@') !== -1)? <a href={'mailto:'+post.url} target="_blank">{post.url}</a> : <a href={'http://'+post.url} target="_blank">{post.url}</a>}
+            <p>Te suena interesante?</p>
+            {(post.url.indexOf('@') !== -1)? <a href={'mailto:'+post.url} className="btn btn-primary btn-block" target="_blank">Aplica</a> : 
+            <a href={'http://'+post.url} className="btn btn-primary btn-block" target="_blank">Aplica</a>}
           </div> : null}
           <div className="post-page-info-item">
           <PostsCategories post={post}/>

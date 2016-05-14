@@ -3,6 +3,7 @@ $red-dark: #E31234;
 $light-gray: #E5E5E5;
 $gray: #95989A;
 $dark-gray: #646464;
+$green: #2ECC71;
 
 body {
   color: $dark-gray;
@@ -37,6 +38,12 @@ p, li, ul {
   color: #fff;
   background-color: $red-dark;
   border-color: $red-dark;
+}
+
+.post-page-info-item .btn-primary {
+  color: #fff;
+  background-color: $green;
+  border-color: $green;
 }
 
 .posts-list-content{
