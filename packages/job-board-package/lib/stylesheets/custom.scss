@@ -1,9 +1,12 @@
-$red: #F81234;
-$red-dark: #E31234;
+$blue: #30d1ba;
+$blue-dark: #3fbfad;
 $light-gray: #E5E5E5;
 $gray: #95989A;
 $dark-gray: #646464;
-$green: #2ECC71;
+$yellow: #eedc00;
+$dark-yellow:#e5da17;
+$dark-bluegray:#284a5b;
+
 
 body {
   color: $dark-gray;
@@ -15,6 +18,9 @@ p, li, ul {
 .header-wrapper{
   background: #fff;
   border-bottom: 1.5px solid $light-gray;
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+    box-shadow: 0 1px 10px rgba(0,0,0,.1);
 }
 
 .header{
@@ -22,63 +28,79 @@ p, li, ul {
   padding-bottom: 5px;
 }
 
+.nav-new-post{
+  margin-left: 20px;
+}
+
 .btn-primary {
   color: #fff;
-  background-color: $red;
-  border-color: $red;
+  background-color: $blue;
+  border-color: $blue;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: $red-dark;
-  border-color: $red-dark;
+  background-color: $blue-dark;
+  border-color: $blue-dark;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: $red-dark;
-  border-color: $red-dark;
+  background-color: $blue-dark;
+  border-color: $blue-dark;
 }
-
+.btn-secondary{
+  border: none;
+  color: $dark-bluegray;
+}
 .post-page-info-item .btn-primary {
   color: #fff;
-  background-color: $green;
-  border-color: $green;
+  background-color: $dark-bluegray;
+  border-color: $dark-bluegray;
 }
 
 .posts-list-content{
   border-top: none;
 }
 .posts-item {
-  border-bottom: none;
-  border: 1.5px solid $light-gray;
-  margin-bottom: 20px;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 5px;
+  margin-top: 5px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .posts-item-title .posts-item-title-link {
-  color: $red;
+  color: $blue;
+  padding-right: 15px;
+}
+.posts-item-date, .post-page-date-posted{
+  font-size: 14px;
+  color: $light-gray;
 }
 
 .posts-categories a {
-	border-color: $gray;
-	background-color: $gray;
+	border-color: $dark-bluegray;
+	background-color: $dark-bluegray;
 	color: #fff;
-	border-radius: 0 0 0 0;
+	border-radius: 10px;
 	font-size: 10px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
 
 .posts-categories a:hover {
-	border-color: $gray;
-	background-color: $gray;
+	border-color: $dark-yellow;
+	background-color: $dark-yellow;
 	color: #fff;
 }
 
-.users-name, .posts-item-user, .posts-item-location {
-  color: $gray;
+.users-name, .posts-item-user, {
+  color: $dark-bluegray;
+}
+
+.posts-item-location{
+  color:$gray;
 }
 
 .users-name:hover {
@@ -97,10 +119,9 @@ p, li, ul {
   border-bottom: 1.5px solid $light-gray;
 }
 
-
 .post-page-title {
   flex-grow: 1;
-  color: $red;
+  color: $blue;
 }
 
 .post-page-body {
